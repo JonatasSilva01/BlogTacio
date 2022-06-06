@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 
 import { useNavigation } from '@react-navigation/native';
+import Rota from "../../rota";
 
 const style = StyleSheet.create({
     container: {
@@ -38,7 +39,7 @@ export default function CategoriasItem({ data, favorite }){
         >
             <Image 
                 style={style.icon}
-                source={{ uri: `http://10.0.0.107:1337${data?.attributes?.icon?.data?.attributes?.url}`}}
+                source={{ uri: `${Rota}${data?.attributes?.icon?.data?.attributes?.url}`}}
             />
             <Text style={style.name}>{data?.attributes?.name}</Text>
         </TouchableOpacity>

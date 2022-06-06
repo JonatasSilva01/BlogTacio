@@ -9,6 +9,7 @@ import { Entypo } from '@expo/vector-icons';
 import api from '../../service/api';
 
 import LinkWeb from '../../components/LinkWeb/index'
+import Rota from '../../rota';
 
 const style = StyleSheet.create({
     container:{
@@ -88,7 +89,7 @@ export default function Detalhes() {
 
           ${post?.attributes?.description}
 
-          Eu Vi lá no devPost!
+          Eu Vi lá no blogTacioDev
         `
       })
 
@@ -115,7 +116,7 @@ export default function Detalhes() {
     <SafeAreaView style={style.container}>
       <Image 
         style={style.cover}
-        source={{ uri: `http://10.0.0.107:1337${post?.attributes?.cover?.data?.attributes?.url}` }}
+        source={{ uri: `${Rota}${post?.attributes?.cover?.data?.attributes?.url}` }}
         resizeMode='cover'
       />
       <Text style={style.title}>{post?.attributes?.title}</Text>

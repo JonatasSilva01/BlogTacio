@@ -1,6 +1,7 @@
 import React from "react";
 import {View, Text, TouchableOpacity, StyleSheet, ImageBackground, Dimensions} from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import Rota from "../../rota";
 
 const { width: WIDTH } = Dimensions.get('window');
 
@@ -41,7 +42,7 @@ export default function FavoritePost({ data }){
     return(
         <TouchableOpacity style={style.container} onPress={handleNavigate}>
             <ImageBackground
-                source={{ uri: `http://10.0.0.107:1337${data?.attributes?.cover?.data?.attributes?.url}` }}
+                source={{ uri: `${Rota}${data?.attributes?.cover?.data?.attributes?.url}` }}
                 style={style.cover}
                 resizeMode="cover"
                 blurRadius={3}

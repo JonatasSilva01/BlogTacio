@@ -2,6 +2,7 @@ import React from "react";
 import { Text, View, TouchableOpacity, StyleSheet, Image } from "react-native";
 
 import { useNavigation } from '@react-navigation/native';
+import Rota from "../../rota";
 
 const style = StyleSheet.create({
     container:{
@@ -52,7 +53,7 @@ export default function PostsItem({ data }){
             <View style={style.header}>
                 <Image 
                     style={style.cover}
-                    source={{ uri: `http://10.0.0.107:1337${data?.attributes?.cover?.data?.attributes?.url}` }}
+                    source={{ uri: `${Rota}${data?.attributes?.cover?.data?.attributes?.url}` }}
                 />
             </View>
             <View style={style.body}>

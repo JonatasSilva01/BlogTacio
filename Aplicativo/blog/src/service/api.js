@@ -1,7 +1,8 @@
 import axios from "axios";
+import Rota from "../rota";
 
 const api = axios.create({
-    baseURL: 'http://10.0.0.107:1337/',
+    baseURL: Rota+'/',
 });
 
 export default api;
